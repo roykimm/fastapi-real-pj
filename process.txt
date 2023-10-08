@@ -1,0 +1,16 @@
+  842  python3 -m venv venv
+  843  pip install fastapi
+  844  pip install uvicorn
+  845  pip freeze > requirements.txt
+  846  uvicorn app.main:app --reload --port 8090
+  847  pip list
+  849  pip install "uvicorn[standard]"
+  852  pip install psycopg2-binary  # 안씀
+  pip install mysql-connector-python
+
+  main: the file main.py (the Python "module") under the app folder.
+app: the object created inside of main.py with the line app = FastAPI().
+--reload: make the server restart after code changes. Only use for development.
+--workers 1 : worker amount
+--host : host ip address
+--port : port number
